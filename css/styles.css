@@ -1,0 +1,90 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    background-color: #56a967;
+}
+
+header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mapLogo {
+    width: 80px;
+    margin-left: 10px;
+}
+
+#sceLogo {
+    width: 340px;
+    height: 100px;
+}
+
+#icono-ingresar {
+    margin-right: 10px;
+    color: #6fc27f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+#icono-ingresar:hover {
+    color: #56a967; /* Cambia el color cuando pasa el mouse (opcional) */
+}
+
+#icono-ingresar span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#icono-ingresar ion-icon {
+    font-size: 45px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carrusel {
+    margin: 15px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 615px;
+    background-color: #DEF4DF;
+}   
+
+.mapCatastral {
+    margin: 15px;
+    width: 730px;
+    height: 500px;
+    background-color: #DEF4DF;
+}
+
+.invParcela {
+    margin: 15px;
+    width: 730px;
+    height: 500px;
+    background-color: #DEF4DF;
+}
+
+footer {
+    background-color: #a0f4ad;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h3 {
+    color: #ffffff;
+}
+
+footer div{
+    width: 30%;
+    text-align: center;
+    border: 1px solid black;
+}
