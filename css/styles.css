@@ -1,90 +1,331 @@
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 15px;
     background-color: #56a967;
+    font-size: 2em;
 }
 
+#icono-ingresar ion-icon {
+    font-size: 2.5em;
+}
+
+#icono-ingresar:hover {
+    color: #56a967;
+}
+
+.image {
+    overflow: hidden;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #3d9050;
+    font-size: 28px;
+    font-weight: bolder;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.container:hover .image img {
+    filter: blur(3px);
+}
+
+.container:hover .text {
+    opacity: 1;
+}
+
+/* Diseño para dispositivos móviles */
+
+/* Diseño Header */
 header {
     background-color: #ffffff;
-    width: 100%;
-    height: 100px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
 }
 
 #mapLogo {
-    width: 80px;
-    margin-left: 10px;
+    width: 60px;
+    margin-left: 5px;
 }
 
 #sceLogo {
-    width: 340px;
-    height: 100px;
+    width: 200px;
+    height: 60px;
 }
 
 #icono-ingresar {
-    margin-right: 10px;
+    margin-right: 5px;
     color: #6fc27f;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
-#icono-ingresar:hover {
-    color: #56a967; /* Cambia el color cuando pasa el mouse (opcional) */
+
+#icono-ingresar ion-icon {
+    font-size: 30px;
 }
 
 #icono-ingresar span {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
+    display: none;
 }
-
-#icono-ingresar ion-icon {
-    font-size: 45px;
-}
-
+/* Diseño Main */
 .main {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
-.carrusel {
-    margin: 15px;
-    margin-bottom: 0;
+.carrusel-container {
+    margin-top: 10px;
     width: 100%;
-    height: 615px;
-    background-color: #DEF4DF;
-}   
-
-.mapCatastral {
-    margin: 15px;
-    width: 730px;
-    height: 500px;
-    background-color: #DEF4DF;
+    height: 250px;
+    background-color: #ffffff;
+    display: flex;
+    overflow: scroll;
 }
 
-.invParcela {
-    margin: 15px;
-    width: 730px;
-    height: 500px;
-    background-color: #DEF4DF;
+.carrusel-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: none;
 }
 
+.carrusel-container img.small-screen {
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+}
+
+/*footer*/
 footer {
     background-color: #a0f4ad;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-between;
+    font-size: 14px;
+    text-align: justify;
+    margin: 15px;
+    width: 100% - 15px;
+    height: 780px;
 }
 
 footer h3 {
     color: #ffffff;
+    text-align: center;
 }
 
-footer div{
-    width: 30%;
+.column2 p {
+    background-color: #ffffff;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border: 1px solid black;
+}
+
+.column2 ion-icon {
+    font-size: 22px;
+    color: #3d9050;
+}
+
+.column3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column1,
+.column2,
+.column3 {
+    padding: 10px;
+}
+
+.miembros {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.miembros p {
+    display: flex;
+    align-items: center;
+}
+
+.miembros ion-icon {
+    font-size: 26px;
+    color: #303f46;
+}
+
+/* Diseño para tabletas */
+@media (min-width: 600px) {
+    /* Diseño Header */
+    #icono-ingresar span {
+        display: flex;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    #mapLogo {
+        width: 80px;
+    }
+
+    #sceLogo {
+        width: 260px;
+        height: 80px;
+    }
+
+    #icono-ingresar {
+        margin-right: 10px;
+    }
+
+    #icono-ingresar ion-icon {
+        font-size: 40px;
+    }
+
+    #icono-ingresar span {
+        font-size: 20px;
+    }
+
+    /*main*/
+    .main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .carrusel-container {
+        width: 97.8%;
+        height: 300px;
+    }
+
+    .carrusel-container img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .carrusel-container img.small-screen {
+        display: none;
+    }
+
+    .carrusel-container img.medium-screen {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: flex;
+    }
+
+    .container {
+        height: 300px;
+        width: 48.55%;
+    }
+
+    .image img {
+        height: 300px;
+    }
+
+    /* footer */
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 700px;
+    }
+
+    .column1,
+    .column2 {
+        margin: 20px;
+        width: 40%;
+    }
+}
+
+/* Diseño para escritorios */
+@media (min-width: 1024px) {
+    #mapLogo {
+        width: 100px;
+    }
+
+    #sceLogo {
+        width: 340px;
+        height: 100px;
+    }
+
+    #icono-ingresar {
+        margin-right: 20px;
+    }
+
+    #icono-ingresar ion-icon {
+        font-size: 45px;
+    }
+
+    #icono-ingresar span {
+        font-size: 24px;
+    }
+
+    /*Main*/
+
+    .carrusel-container {
+        height: 600px;
+    }
+    .carrusel-container img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .carrusel-container img.medium-screen {
+        display: none;
+    }
+
+    .carrusel-container img.large-screen {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .container {
+        height: 400px;
+    }
+
+    .image img {
+        height: 400px;
+    }
+
+    footer {
+        justify-content: center;
+        gap: 5%;
+        height: 380px;
+        padding: 0;
+    }
+
+    .column1,
+    .column2,
+    .column3 {
+        margin: 20px;
+        width: 22%;
+    }
 }

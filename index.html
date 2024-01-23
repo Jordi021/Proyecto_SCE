@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/styles.css" />
         <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="carrusel.css" />
+        <link
+            rel="icon"
+            href="/img/logos/ico-R.png"
+            type="image/x-icon"
+            sizes="45x45"
+        />
         <title>SCE</title>
     </head>
     <body>
@@ -18,26 +25,70 @@
         </header>
 
         <div class="main">
-            <div class="carrusel">Carrusel</div>
-            <div class="mapCatastral">Mapa Catastral</div>
-            <div class="invParcela">Inventario Parcela</div>
+            <div class="carrusel-container">
+                <img class="small-screen" src="/img/esperanza/2.jpg" alt="" />
+                <img class="small-screen" src="/img/esperanza/3.jpg" alt="" />
+                <img class="small-screen" src="/img/esperanza/5.jpg" alt="" />
+
+                <img class="medium-screen" src="/img/esperanza/1.jpg" alt="" />
+                <img class="medium-screen" src="/img/esperanza/1.jpg" alt="" />
+                <img class="medium-screen" src="/img/esperanza/1.jpg" alt="" />
+
+                <img class="large-screen" src="/img/esperanza/0.jpg" alt="" />
+                <img class="large-screen" src="/img/esperanza/4.jpg" alt="" />
+                <img class="large-screen" src="/img/esperanza/5.jpg" alt="" />
+            </div>
+
+            <div class="container">
+                <div class="image">
+                    <img src="/img/Mapa Catastral.jpg" alt="Mapa Catastral" />
+                    <div class="text">MAPA CATASTRAL</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="image">
+                    <img
+                        src="/img/Inventario Parcela.jpg"
+                        alt="Inventario Parcela"
+                    />
+                    <div class="text">INVENTARIO PARCELA</div>
+                </div>
+            </div>
         </div>
 
         <footer>
-            <div>
+            <div class="column1">
                 <h3>SERVICIO CATASTRAL "LA ESPERANZA"</h3>
                 <p>
-                    PÁGINA ENCARGADA DE PRESENTAR EL MAPA<br>CATASTRAL E INVENTARIO DE CADA COMUNIDAD<br>DE LA PARROQUIA “LA ESPERANZA”.
-                </p>    
+                    PÁGINA ENCARGADA DE PRESENTAR EL MAPA CATASTRAL E INVENTARIO
+                    DE CADA COMUNIDAD DE LA PARROQUIA “LA ESPERANZA”.
+                </p>
             </div>
-            <div>
+
+            <div class="column2">
                 <h3>CONTÁCTANOS</h3>
+
+                <p><ion-icon name="mail"></ion-icon>mrullcot@utn.edu</p>
+                <br />
+
+                <p><ion-icon name="call"></ion-icon>+593 982473434</p>
+                <br />
+                <p>
+                    <ion-icon name="home"></ion-icon>
+                    Av 17 de Julio 5-21 y Gral. José María Cordova - Sector El
+                    Olivo
+                </p>
+                <br />
             </div>
-            <div class="miembros">
+
+            <div class="column3">
                 <h3>MIEMBROS</h3>
-                <p>Jordan Puruncajas</p>
-                <p>Diego Recalde</p>
-                <p>Melanie Ullco</p>
+                <div class="miembros">
+                    <p><ion-icon name="person"></ion-icon>Jordan Puruncajas</p>
+                    <p><ion-icon name="person"></ion-icon>Diego Recalde</p>
+                    <p><ion-icon name="person"></ion-icon>Melanie Ullco</p>
+                </div>
             </div>
         </footer>
 
